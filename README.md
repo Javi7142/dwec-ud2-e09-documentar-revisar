@@ -90,7 +90,7 @@ Salida de `npm test` (13 tests en cuatro `describe`):
 | `describe` | Caso límite que prueba |
 |------------|------------------------|
 | `calcularMulta` | Sin retraso (0 días y días negativos, que dan 0 €) y justo la multa máxima (50 días × 0,20 € = 10 €), además de una multa por encima del tope (80 días, que se queda en 10 €) |
-| `formatearTitulo` | Un título vacío (`'""' + ' (Anónimo)'`) |
+| `formatearTitulo` | Un título vacío (el resultado es `'"" (Anónimo)'`) |
 | `puedePedirPrestado` | Justo el límite de préstamos (3 préstamos no permiten pedir otro) y multas pendientes sin préstamos |
 | `contarDisponibles` | Una lista vacía y una lista en la que ninguno está disponible (resultado 0 en ambos casos) |
 
