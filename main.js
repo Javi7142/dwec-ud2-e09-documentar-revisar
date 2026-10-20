@@ -1,10 +1,15 @@
 // E09 · Documentar y revisar
 // Prueba rápida de las funciones de la biblioteca
-import { f, titulo, puede, cuenta } from './biblioteca.js';
+import {
+  calcularMulta,
+  formatearTitulo,
+  puedePedirPrestado,
+  contarDisponibles,
+} from './biblioteca.js';
 
-console.log(f(3));
-console.log(f(80));
-console.log(titulo('Rayuela', 'Julio Cortázar'));
-console.log(puede(2, false));
-console.log(puede(3, false));
-console.log(cuenta(['disponible', 'prestado', 'disponible', 'reparación']));
+console.log(calcularMulta(3));
+console.log(calcularMulta(80));
+console.log(formatearTitulo('Rayuela', 'Julio Cortázar'));
+console.log(puedePedirPrestado(2, false));
+console.log(puedePedirPrestado(3, false));
+console.log(contarDisponibles(['disponible', 'prestado', 'disponible', 'reparación']));
