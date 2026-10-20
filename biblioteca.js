@@ -73,7 +73,7 @@ export function puedePedirPrestado(prestamosActivos, tieneMultas) {
 export function contarDisponibles(estados) {
   let disponibles = 0;
   for (const estado of estados) {
-    if (estado === 'disponible') disponibles++;
+    if (estado == 'disponible') disponibles++;
   }
   return disponibles;
 }
