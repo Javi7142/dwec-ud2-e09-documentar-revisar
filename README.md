@@ -29,7 +29,7 @@ Salida de `npm run lint` con el código de partida (5 errores de tres reglas):
 ```text
 > e09-documentar-revisar@1.0.0 lint
 > eslint .
-C:\Users\jacp9\Documents\2DAW\Desarrollo en entorno cliente\UD2_2DAW_DWEC_2627\practicas\ejercicios\E09-DocumentarRevisar\biblioteca.js
+biblioteca.js
    5:1   error  Unexpected var, use let or const instead           no-var
   23:9   error  'limite' is never reassigned. Use 'const' instead  prefer-const
   24:5   error  Unexpected var, use let or const instead           no-var
@@ -81,10 +81,24 @@ Con `// @ts-check` en la primera línea de `biblioteca.js`, el comprobador de ti
 Salida de `npm test` (13 tests en cuatro `describe`):
 
 ```text
+RUN  v5.0.5
+ ✓ biblioteca.test.js > calcularMulta > multiplica los días de retraso por 0,20 € y redondea a céntimos 1ms
+ ✓ biblioteca.test.js > calcularMulta > no cobra nada sin retraso (caso límite: 0 días) 0ms
+ ✓ biblioteca.test.js > calcularMulta > no cobra nada si los días son negativos 0ms
+ ✓ biblioteca.test.js > calcularMulta > llega justo a la multa máxima con 50 días (caso límite) 0ms
+ ✓ biblioteca.test.js > calcularMulta > no supera la multa máxima con muchos días de retraso 0ms
+ ✓ biblioteca.test.js > formatearTitulo > pone el título entre comillas y el autor entre paréntesis 0ms
+ ✓ biblioteca.test.js > formatearTitulo > admite un título vacío (caso límite) 0ms
+ ✓ biblioteca.test.js > puedePedirPrestado > permite pedir con menos de 3 préstamos y sin multas 0ms
+ ✓ biblioteca.test.js > puedePedirPrestado > no permite pedir al llegar justo al límite de 3 préstamos (caso límite) 0ms
+ ✓ biblioteca.test.js > puedePedirPrestado > no permite pedir con multas pendientes aunque no haya préstamos 0ms
+ ✓ biblioteca.test.js > contarDisponibles > cuenta solo los ejemplares disponibles 0ms
+ ✓ biblioteca.test.js > contarDisponibles > devuelve 0 con una lista vacía (caso límite) 0ms
+ ✓ biblioteca.test.js > contarDisponibles > devuelve 0 si ninguno está disponible 0ms
  Test Files  1 passed (1)
       Tests  13 passed (13)
-   Start at  14:21:49
-   Duration  343ms (import 60%, transform 28%, tests 6%, worker 6%)
+   Start at  14:26:10
+   Duration  169ms (import 51%, transform 24%, worker 14%, tests 11%, environment 1%)
 ```
 
 | `describe` | Caso límite que prueba |
